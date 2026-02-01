@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Ultimate | 飞盘校队</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 苹果官网字体质感 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            letter-spacing: -0.022em;
+            -webkit-font-smoothing: antialiased;
+            background-color: #000; /* 确保背景在加载前是黑色的 */
+        }
+        
+        /* 极致平滑的淡入动画 */
+        .bg-fadein {
+            opacity: 0;
+            transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bg-fadein-active {
+            opacity: 1;
+        }
+
+        /* 苹果风格背景渐变 */
+        .apple-bg {
+            background: linear-gradient(180deg, #18181b 0%, #000000 100%);
+        }
+
+        /* 移除移动端点击蓝色高亮 */
+        * { -webkit-tap-highlight-color: transparent; }
+
+        /* 卡片轻微悬停/点击反馈 */
+        .apple-card-press {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s;
+        }
+        .apple-card-press:active {
+            transform: scale(0.98);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 使用 requestAnimationFrame 确保在下一帧开始动画，更流畅
+            requestAnimationFrame(() => {
+                document.body.classList.add('bg-fadein-active');
+            });
+        });
+    </script>
+</head>
+<body class="bg-black text-white apple-bg bg-fadein">
+
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/70 backdrop-blur-xl">
+        <div class="max-w-screen-xl mx-auto h-14 flex items-center justify-between px-6">
+            <a href="index.html" class="text-white font-bold tracking-tighter hover:opacity-70 transition text-lg">ULTIMATE</a>
+            <div class="flex space-x-6 text-[13px] font-medium text-white/60">
+                <a href="intro.html" class="hover:text-white transition">介绍</a>
+                <a href="players.html" class="hover:text-white transition">队员</a>
+                <a href="scores.html" class="hover:text-white transition">分数</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20 pb-10">
+        <section class="min-h-[85vh] flex flex-col items-center justify-center px-6 relative text-center">
+            <div class="flex flex-col items-center justify-center w-full">
+                <h1 class="font-black bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500 mb-6 text-5xl sm:text-7xl md:text-8xl lg:text-[100px] leading-[1.1] tracking-tight">
+                    极速飞行
+                </h1>
+                
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-400 font-medium mb-10 max-w-2xl mx-auto leading-relaxed">
+                    为热爱而生，在空中划出最精准的弧线
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 items-center">
+                    <a href="scores.html" class="bg-blue-600 hover:bg-blue-500 active:scale-95 px-10 py-4 rounded-full text-sm font-bold transition-all shadow-lg shadow-blue-600/20">
+                        查看最新比分
+                    </a>
+                </div>
+
+                <div class="mt-16 w-full max-w-4xl mx-auto opacity-90 hover:opacity-100 transition duration-1000">
+                    <div class="aspect-video bg-gradient-to-t from-blue-600/10 to-transparent rounded-[32px] border border-white/10 flex items-center justify-center overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=cover&w=800&q=80"
+                            alt="飞盘特写"
+                            class="object-contain w-full h-full max-h-[280px] md:max-h-[400px] select-none pointer-events-none scale-110"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-screen-xl mx-auto py-10 px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="intro.html" class="apple-card-press bg-[#161617] p-8 md:p-12 rounded-[32px] h-[320px] md:h-[450px] flex flex-col justify-end border border-white/5 hover:bg-[#1c1c1e] group">
+                <h2 class="text-2xl md:text-4xl font-bold mb-3 transition group-hover:translate-x-1">了解飞盘</h2>
+                <p class="text-gray-400 text-lg md:text-xl font-medium">不仅仅是投掷，更是一种精神</p>
+            </a>
+            
+            <a href="players.html" class="apple-card-press bg-[#161617] p-8 md:p-12 rounded-[32px] h-[320px] md:h-[450px] flex flex-col justify-end border border-white/5 hover:bg-[#1c1c1e] group">
+                <h2 class="text-2xl md:text-4xl font-bold mb-3 transition group-hover:translate-x-1">核心队员</h2>
+                <p class="text-gray-400 text-lg md:text-xl font-medium">见证他们的每一次接盘与奔跑</p>
+            </a>
+        </section>
+    </main>
+
+    <footer class="py-12 text-center">
+        <p class="text-[10px] text-gray-600 tracking-[0.3em] uppercase font-bold">Grindstone Ultimate · 2026</p>
+    </footer>
+
+</body>
+</html>
