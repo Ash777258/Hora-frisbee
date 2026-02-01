@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>成员名单 | Grindstone S1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { 
+            background-color: #000; 
+            color: #fff; 
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+            -webkit-font-smoothing: antialiased; 
+            overflow-x: hidden;
+        }
+        .glass-nav { background: rgba(0, 0, 0, 0.7); backdrop-filter: saturate(180%) blur(20px); }
+        
+        .captain-card { 
+            background: linear-gradient(145deg, #1c1c1e, #0a0a0a);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.15, 0.83, 0.66, 1);
+            -webkit-tap-highlight-color: transparent;
+        }
+        @media (hover: hover) {
+            .captain-card:hover { transform: scale(1.02); border-color: rgba(255,255,255,0.2); }
+        }
+        .captain-card:active { transform: scale(0.97); }
+        
+        .member-row {
+            background: rgba(255,255,255,0.03);
+            border-radius: 18px;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+        .member-row:active { background: rgba(255,255,255,0.08); transform: scale(0.99); }
+
+        .gender-tag-m { color: #60a5fa; background: rgba(96, 165, 250, 0.12); }
+        .gender-tag-f { color: #f472b6; background: rgba(244, 114, 182, 0.12); }
+        
+        .count-up { 
+            font-variant-numeric: tabular-nums; 
+            display: inline-block;
+            min-width: 1.2em;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="glass-nav fixed top-0 w-full z-50 border-b border-white/5">
+        <div class="max-w-screen-xl mx-auto h-14 flex items-center justify-between px-6">
+            <a href="index.html" class="text-white font-bold tracking-tighter text-lg">ULTIMATE</a>
+            <div class="flex space-x-6 text-[13px] font-medium text-white/60">
+                <a href="intro.html" class="hover:text-white transition">介绍</a>
+                <a href="players.html" class="text-white">队员</a>
+                <a href="scores.html" class="hover:text-white transition">分数</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-20 px-4 md:px-6 max-w-6xl mx-auto">
+        
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-[10px] font-bold tracking-[0.4em] text-blue-500 uppercase mb-3">Team Captains</h2>
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">领军人物</h1>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div class="captain-card p-6 md:p-8 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-red-500/10 rounded-full flex items-center justify-center mb-5 border border-red-500/20 shadow-lg shadow-red-500/10">
+                        <span class="text-xl md:text-2xl font-bold text-red-500">张</span>
+                    </div>
+                    <span class="text-[9px] font-bold text-red-500 tracking-[0.2em] mb-2 uppercase opacity-80">队长 · 磨刀石</span>
+                    <h3 class="text-xl md:text-2xl font-bold mb-1">张书亚</h3>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="px-2 py-0.5 rounded-full text-[9px] font-bold gender-tag-m">MALE</span>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-3xl md:text-4xl font-mono font-bold text-white count-up">42</p>
+                        <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">Season Pts</p>
+                    </div>
+                </div>
+
+                <div class="captain-card p-6 md:p-8 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-blue-500/10 rounded-full flex items-center justify-center mb-5 border border-blue-500/20 shadow-lg shadow-blue-500/10">
+                        <span class="text-xl md:text-2xl font-bold text-blue-500">马</span>
+                    </div>
+                    <span class="text-[9px] font-bold text-blue-500 tracking-[0.2em] mb-2 uppercase opacity-80">队长 · 路边一条</span>
+                    <h3 class="text-xl md:text-2xl font-bold mb-1">马睿洋</h3>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="px-2 py-0.5 rounded-full text-[9px] font-bold gender-tag-m">MALE</span>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-3xl md:text-4xl font-mono font-bold text-white count-up">42</p>
+                        <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">Season Pts</p>
+                    </div>
+                </div>
+
+                <div class="captain-card p-6 md:p-8 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-yellow-500/10 rounded-full flex items-center justify-center mb-5 border border-yellow-500/20 shadow-lg shadow-yellow-500/10">
+                        <span class="text-xl md:text-2xl font-bold text-yellow-500">花</span>
+                    </div>
+                    <span class="text-[9px] font-bold text-yellow-500 tracking-[0.2em] mb-2 uppercase opacity-80">队长 · 单翅鸟</span>
+                    <h3 class="text-xl md:text-2xl font-bold mb-1">花天治</h3>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="px-2 py-0.5 rounded-full text-[9px] font-bold gender-tag-m">MALE</span>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-3xl md:text-4xl font-mono font-bold text-white count-up">42</p>
+                        <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">Season Pts</p>
+                    </div>
+                </div>
+
+                <div class="captain-card p-6 md:p-8 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-green-500/10 rounded-full flex items-center justify-center mb-5 border border-green-500/20 shadow-lg shadow-green-500/10">
+                        <span class="text-xl md:text-2xl font-bold text-green-500">何</span>
+                    </div>
+                    <span class="text-[9px] font-bold text-green-500 tracking-[0.2em] mb-2 uppercase opacity-80">队长 · Disciples</span>
+                    <h3 class="text-xl md:text-2xl font-bold mb-1">何一</h3>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="px-2 py-0.5 rounded-full text-[9px] font-bold gender-tag-m">MALE</span>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-3xl md:text-4xl font-mono font-bold text-white count-up">16</p>
+                        <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">Season Pts</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex items-baseline justify-between mb-8 border-b border-white/5 pb-4">
+                <h2 class="text-xl md:text-2xl font-bold tracking-tight">核心战力</h2>
+                <span class="text-[10px] text-gray-600 font-mono tracking-widest">CORE MEMBERS</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
+                <div class="member-row p-5 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center font-bold text-sm">邹</div>
+                        <div>
+                            <p class="font-bold text-sm md:text-base">邹培信 <span class="ml-1 px-1.5 py-0.5 rounded text-[8px] gender-tag-m">M</span></p>
+                            <p class="text-[9px] text-gray-500 uppercase mt-0.5">Team: 路边一条</p>
+                        </div>
+                    </div>
+                    <p class="text-xl font-mono font-bold count-up">42</p>
+                </div>
+
+                <div class="member-row p-5 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-500/10 flex items-center justify-center font-bold text-pink-500 text-sm">E</div>
+                        <div>
+                            <p class="font-bold text-sm md:text-base">Evelyn <span class="ml-1 px-1.5 py-0.5 rounded text-[8px] gender-tag-f">F</span></p>
+                            <p class="text-[9px] text-gray-500 uppercase mt-0.5">Team: 路边一条</p>
+                        </div>
+                    </div>
+                    <p class="text-xl font-mono font-bold text-pink-500 count-up">36</p>
+                </div>
+
+                <div class="member-row p-5 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-500/10 flex items-center justify-center font-bold text-pink-500 text-sm">郭</div>
+                        <div>
+                            <p class="font-bold text-sm md:text-base">郭佳音 <span class="ml-1 px-1.5 py-0.5 rounded text-[8px] gender-tag-f">F</span></p>
+                            <p class="text-[9px] text-gray-500 uppercase mt-0.5">Team: Disciples</p>
+                        </div>
+                    </div>
+                    <p class="text-xl font-mono font-bold text-pink-500 count-up">42</p>
+                </div>
+
+                <div class="member-row p-5 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center font-bold text-sm">薛</div>
+                        <div>
+                            <p class="font-bold text-sm md:text-base">薛明道 <span class="ml-1 px-1.5 py-0.5 rounded text-[8px] gender-tag-m">M</span></p>
+                            <p class="text-[9px] text-gray-500 uppercase mt-0.5">Team: 磨刀石</p>
+                        </div>
+                    </div>
+                    <p class="text-xl font-mono font-bold count-up">28</p>
+                </div>
+
+                <div class="member-row p-5 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-500/10 flex items-center justify-center font-bold text-pink-500 text-sm">方</div>
+                        <div>
+                            <p class="font-bold text-sm md:text-base">方子研 <span class="ml-1 px-1.5 py-0.5 rounded text-[8px] gender-tag-f">F</span></p>
+                            <p class="text-[9px] text-gray-500 uppercase mt-0.5">Team: 单翅鸟</p>
+                        </div>
+                    </div>
+                    <p class="text-xl font-mono font-bold text-pink-500 count-up">39</p>
+                </div>
+
+                <div class="member-row p-5 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-500/10 flex items-center justify-center font-bold text-pink-500 text-sm">丁</div>
+                        <div>
+                            <p class="font-bold text-sm md:text-base">丁紫蓉 <span class="ml-1 px-1.5 py-0.5 rounded text-[8px] gender-tag-f">F</span></p>
+                            <p class="text-[9px] text-gray-500 uppercase mt-0.5">Team: 路边一条</p>
+                        </div>
+                    </div>
+                    <p class="text-xl font-mono font-bold text-pink-500 count-up">36</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-12 text-center text-gray-600 text-[10px] tracking-[0.3em] uppercase border-t border-white/5">
+        Grindstone Ultimate · S1 Members
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.innerText); 
+                    el.innerText = "0"; 
+                    const duration = 1200; 
+                    const startTime = performance.now();
+                    const update = (currentTime) => {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                        el.innerText = Math.floor(easeOutQuart * target);
+                        if (progress < 1) requestAnimationFrame(update);
+                        else el.innerText = target;
+                    };
+                    requestAnimationFrame(update);
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.count-up').forEach(n => observer.observe(n));
+    });
+    </script>
+</body>
+</html>
